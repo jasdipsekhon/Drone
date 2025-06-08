@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "make",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PATH": "/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin:${env:PATH}"
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "make clean",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PATH": "/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin:${env:PATH}"
+        }
+      }
+    }
+  ]
+}
