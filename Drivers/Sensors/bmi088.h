@@ -1,12 +1,6 @@
 #pragma once
 
 /**
- * @file        bmi0888.h
- * @brief       Driver for BMI088 IMU sensor
- * 
-#pragma once
-
-/**
  * @file        bmi088.h
  * @brief       Driver for BMI088 IMU sensor
  * @author      Jasdip Sekhon
