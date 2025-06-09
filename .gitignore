@@ -35,12 +35,6 @@ Middlewares/Third_Party/FreeRTOS/portable/MemMang/*.o
 Drivers/**/*.o
 Core/**/*.o
 
-# CMake/Make output
-Makefile
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-
 # Editor/IDE artifacts
 *~
 *.swp
