@@ -10,11 +10,17 @@
 
 extern SPI_HandleTypeDef hspi1;
 
-static void bmi088_cs_accel_low(void)  { HAL_GPIO_WritePin(BMI088_ACCEL_CS_GPIO, BMI088_ACCEL_CS_PIN, GPIO_PIN_RESET); }
-static void bmi088_cs_accel_high(void) { HAL_GPIO_WritePin(BMI088_ACCEL_CS_GPIO, BMI088_ACCEL_CS_PIN, GPIO_PIN_SET); }
+static void bmi088_cs_accel_low(void) { 
+    HAL_GPIO_WritePin(BMI088_ACCEL_CS_GPIO, BMI088_ACCEL_CS_PIN, GPIO_PIN_RESET);
+ }
+static void bmi088_cs_accel_high(void) {
+    HAL_GPIO_WritePin(BMI088_ACCEL_CS_GPIO, BMI088_ACCEL_CS_PIN, GPIO_PIN_SET);
+ }
 
-static void bmi088_cs_gyro_low(void)   { HAL_GPIO_WritePin(BMI088_GYRO_CS_GPIO, BMI088_GYRO_CS_PIN, GPIO_PIN_RESET); }
-static void bmi088_cs_gyro_high(void)  { HAL_GPIO_WritePin(BMI088_GYRO_CS_GPIO, BMI088_GYRO_CS_PIN, GPIO_PIN_SET); }
+static void bmi088_cs_gyro_low(void) { 
+    HAL_GPIO_WritePin(BMI088_GYRO_CS_GPIO, BMI088_GYRO_CS_PIN, GPIO_PIN_RESET);
+ }
+static void bmi088_cs_gyro_high(void) { HAL_GPIO_WritePin(BMI088_GYRO_CS_GPIO, BMI088_GYRO_CS_PIN, GPIO_PIN_SET); }
 
 bool bmi088_init(void) {
 }
