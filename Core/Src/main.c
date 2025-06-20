@@ -19,6 +19,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "stdio.h"
+#include "string.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -186,10 +188,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  static char buf[100];
   while (1)
   {
     /* USER CODE END WHILE */
+    // Toggle external LED on PB0
+    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 
+    // Send UART debug message to PuTTY
+    snprintf(buf, sizeof(buf), "STM32H7 heartbeat: LED toggled\n");
+    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), HAL_MAX_DELAY);
+
+    HAL_Delay(500);  // Wait 500ms
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
