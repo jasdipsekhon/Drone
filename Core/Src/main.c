@@ -187,13 +187,15 @@ int main(void)
   {
     /* USER CODE END WHILE */
     // Toggle external LED on PB0
-    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+    // HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 
-    // Send UART debug message to PuTTY
-    snprintf(buf, sizeof(buf), "STM32H7 heartbeat: LED toggled\n");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), HAL_MAX_DELAY);
+    // // Send UART debug message to PuTTY
+    // snprintf(buf, sizeof(buf), "STM32H7 heartbeat: LED toggled\n");
+    // HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), HAL_MAX_DELAY);
 
-    HAL_Delay(500);  // Wait 500ms
+    // HAL_Delay(500);  // Wait 500ms
+    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+    HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
