@@ -26,15 +26,7 @@ cd Drone
 
 ---
 
-## 2. Download ARM Toolchain
-
-```bash
-(https://developer.arm.com/downloads/-/gnu-rm)
-```
-
----
-
-## 3. Build the Project
+## 2. Build the Project
 
 ```bash
 make
@@ -42,7 +34,7 @@ make
 
 ---
 
-## 4. Flash Firmware
+## 3. Flash Firmware
 
 **a. macOS:**
 ```bash
